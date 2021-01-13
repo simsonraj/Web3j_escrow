@@ -1,7 +1,7 @@
-# Contract
+# Web3j_Escrow Management
 
 The Solidity contract for the escrow management
-
+Solidty + web3j
 This project is to demonstrate the ability of Web3j framework to connect and interact with Smart contracts.
 The java wrapper files for tests and solidity are created using the web3j cli 
 For more info

@@ -25,3 +25,6 @@
 23:16:53.969 [main] INFO  org.web3j.Web3App - Action 22 - Buyer 1 | Complete | Coffee
 23:16:54.393 [main] INFO  org.web3j.Web3App - ############################################################################# 
 23:16:54.623 [main] INFO  org.web3j.Web3App - Total Escrow Balance as of Latest: 200
+
+Deployed Address on rinkeby
+0x2748544b003Dac62E33e03D7aBA752CE5BCF9596

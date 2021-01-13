@@ -8,4 +8,4 @@ For more info
 [Web3j](http://docs.web3j.io/latest/)
 ### Output.txt
 
-The output of running the Web3App.java is linked to the [output.txt](https://github.com/simsonraj/Web3j_escrow/blob/main/output.txt) file
+The output of running the Web3App.java is copied to the [output.txt](https://github.com/simsonraj/Web3j_escrow/blob/main/output.txt) file

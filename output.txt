@@ -1,0 +1,27 @@
+23:16:45.891 [main] INFO  org.web3j.Web3App - Deploying smart contract
+23:16:46.277 [main] INFO  org.web3j.Web3App - Smart contract deployed to address 0x2d2bfb83fa634753a410f5f527fc328999a8e5ac
+23:16:46.449 [main] INFO  org.web3j.Web3App - Total Escrow Balance as of Initial: 0
+23:16:46.449 [main] INFO  org.web3j.Web3App - Action 1 - Buyer 1 | ADD
+23:16:46.596 [main] INFO  org.web3j.Web3App - Action 2 - Buyer 2 | ADD 
+23:16:46.811 [main] INFO  org.web3j.Web3App - Action 3 - Seller 1 | ADD
+23:16:47.226 [main] INFO  org.web3j.Web3App - Action 4 - Seller 2 | ADD 
+23:16:47.459 [main] INFO  org.web3j.Web3App - Action 5 - Buyer 1 | Credit | 20
+23:16:47.840 [main] INFO  org.web3j.Web3App - Action 6 - Buyer 2 | Credit | 40
+23:16:48.128 [main] INFO  org.web3j.Web3App - Action 7 - Seller 1 | Offer | Coffee, 3
+23:16:48.570 [main] INFO  org.web3j.Web3App - Action 8 - Seller 2 | Offer | T-Shirt, 5
+23:16:48.853 [main] INFO  org.web3j.Web3App - Action 9 - Seller 1 | Offer | Tea, 2.5
+23:16:49.263 [main] INFO  org.web3j.Web3App - Action 10 - Seller 1 | Offer | Cake, 3.5
+23:16:49.669 [main] INFO  org.web3j.Web3App - Action 11 - Seller 2 | Offer | Shorts, 8
+23:16:50.274 [main] INFO  org.web3j.Web3App - Action 12 - Seller 2 | Offer | Hoody, 12
+23:16:50.556 [main] INFO  org.web3j.Web3App - Action 13 - Buyer 1 | Order | T-Shirt
+23:16:51.040 [main] INFO  org.web3j.Web3App - Action 14 - Buyer 1 | Deposit | 10
+23:16:51.311 [main] INFO  org.web3j.Web3App - Action 15 - Buyer 2 | Deposit | 12
+23:16:51.685 [main] INFO  org.web3j.Web3App - Action 16 - Buyer 2 | Order | Hoody
+23:16:52.117 [main] INFO  org.web3j.Web3App - Action 17 - Buyer 1 | Complete | T-Shirt
+23:16:52.455 [main] INFO  org.web3j.Web3App - Action 18 - Buyer 1 | Order | Coffee
+23:16:52.724 [main] INFO  org.web3j.Web3App - Action 19 - Buyer 1 | Order | Cake
+23:16:53.215 [main] INFO  org.web3j.Web3App - Action 20 - Buyer 2 | Complain | Hoody
+23:16:53.501 [main] INFO  org.web3j.Web3App - Action 21 - Buyer 2 | Order | Tea
+23:16:53.969 [main] INFO  org.web3j.Web3App - Action 22 - Buyer 1 | Complete | Coffee
+23:16:54.393 [main] INFO  org.web3j.Web3App - ############################################################################# 
+23:16:54.623 [main] INFO  org.web3j.Web3App - Total Escrow Balance as of Latest: 200

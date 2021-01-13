@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - EscrowTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>EscrowTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.web3j.generated.contracts.html">org.web3j.generated.contracts</a> &gt; EscrowTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.161s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">71%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="deposit()"></a>
+<h3 class="failures">deposit()</h3>
+<span class="code">
+<pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:345)
+	at java.base/java.util.TreeMap.get(TreeMap.java:279)
+	at org.web3j.evm.PassthroughTracer.traceExecution(PassthroughTracer.kt:67)
+	at org.hyperledger.besu.ethereum.vm.EVM.executeNextOperation(EVM.java:75)
+	at org.hyperledger.besu.ethereum.vm.EVM.runToHalt(EVM.java:51)
+	at org.hyperledger.besu.ethereum.mainnet.AbstractMessageProcessor.codeExecute(AbstractMessageProcessor.java:156)
+	at org.hyperledger.besu.ethereum.mainnet.AbstractMessageProcessor.process(AbstractMessageProcessor.java:170)
+	at org.hyperledger.besu.ethereum.mainnet.MainnetTransactionProcessor.process(MainnetTransactionProcessor.java:345)
+	at org.hyperledger.besu.ethereum.mainnet.MainnetTransactionProcessor.processTransaction(MainnetTransactionProcessor.java:291)
+	at org.hyperledger.besu.ethereum.mainnet.MainnetTransactionProcessor.processTransaction(MainnetTransactionProcessor.java:42)
+	at org.hyperledger.besu.ethereum.mainnet.TransactionProcessor.processTransaction(TransactionProcessor.java:167)
+	at org.web3j.evm.EmbeddedEthereum.processTransaction(EmbeddedEthereum.kt:160)
+	at org.web3j.evm.EmbeddedEthereum.processTransaction(EmbeddedEthereum.kt:133)
+	at org.web3j.evm.EmbeddedWeb3jService.ethSendRawTransaction(EmbeddedWeb3jService.kt:169)
+	at org.web3j.evm.EmbeddedWeb3jService.send(EmbeddedWeb3jService.kt:105)
+	at org.web3j.evm.EmbeddedWeb3jService.send(EmbeddedWeb3jService.kt:57)
+	at org.web3j.protocol.core.Request.send(Request.java:87)
+	at org.web3j.tx.RawTransactionManager.signAndSend(RawTransactionManager.java:187)
+	at org.web3j.tx.RawTransactionManager.sendTransaction(RawTransactionManager.java:125)
+	at org.web3j.tx.TransactionManager.executeTransaction(TransactionManager.java:80)
+	at org.web3j.tx.ManagedTransaction.send(ManagedTransaction.java:127)
+	at org.web3j.tx.Contract.executeTransaction(Contract.java:366)
+	at org.web3j.tx.Contract.executeTransaction(Contract.java:349)
+	at org.web3j.tx.Contract.executeTransaction(Contract.java:343)
+	at org.web3j.tx.Contract.executeTransaction(Contract.java:338)
+	at org.web3j.tx.Contract.lambda$executeRemoteCallTransaction$3(Contract.java:409)
+	at org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:42)
+	at org.web3j.generated.contracts.EscrowTest.deposit(EscrowTest.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="getEscrowBalanceTotal()"></a>
+<h3 class="failures">getEscrowBalanceTotal()</h3>
+<span class="code">
+<pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:345)
+	at java.base/java.util.TreeMap.get(TreeMap.java:279)
+	at org.web3j.evm.PassthroughTracer.traceExecution(PassthroughTracer.kt:67)
+	at org.hyperledger.besu.ethereum.vm.EVM.executeNextOperation(EVM.java:75)
+	at org.hyperledger.besu.ethereum.vm.EVM.runToHalt(EVM.java:51)
+	at org.hyperledger.besu.ethereum.mainnet.AbstractMessageProcessor.codeExecute(AbstractMessageProcessor.java:156)
+	at org.hyperledger.besu.ethereum.mainnet.AbstractMessageProcessor.process(AbstractMessageProcessor.java:170)
+	at org.hyperledger.besu.ethereum.mainnet.MainnetTransactionProcessor.process(MainnetTransactionProcessor.java:345)
+	at org.hyperledger.besu.ethereum.mainnet.MainnetTransactionProcessor.processTransaction(MainnetTransactionProcessor.java:291)
+	at org.hyperledger.besu.ethereum.mainnet.MainnetTransactionProcessor.processTransaction(MainnetTransactionProcessor.java:42)
+	at org.hyperledger.besu.ethereum.mainnet.TransactionProcessor.processTransaction(TransactionProcessor.java:167)
+	at org.web3j.evm.EmbeddedEthereum.makeEthCall(EmbeddedEthereum.kt:331)
+	at org.web3j.evm.EmbeddedEthereum.ethCall(EmbeddedEthereum.kt:350)
+	at org.web3j.evm.EmbeddedWeb3jService.ethCall(EmbeddedWeb3jService.kt:192)
+	at org.web3j.evm.EmbeddedWeb3jService.send(EmbeddedWeb3jService.kt:71)
+	at org.web3j.evm.EmbeddedWeb3jService.send(EmbeddedWeb3jService.kt:57)
+	at org.web3j.protocol.core.Request.send(Request.java:87)
+	at org.web3j.tx.RawTransactionManager.sendCall(RawTransactionManager.java:155)
+	at org.web3j.tx.ManagedTransaction.call(ManagedTransaction.java:134)
+	at org.web3j.tx.Contract.executeCall(Contract.java:292)
+	at org.web3j.tx.Contract.executeCallSingleValueReturn(Contract.java:300)
+	at org.web3j.tx.Contract.executeCallSingleValueReturn(Contract.java:311)
+	at org.web3j.tx.Contract.lambda$executeRemoteCallSingleValueReturn$1(Contract.java:399)
+	at org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:42)
+	at org.web3j.generated.contracts.EscrowTest.getEscrowBalanceTotal(EscrowTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">complain()</td>
+<td class="success">0.092s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">complete()</td>
+<td class="success">0.172s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">credit()</td>
+<td class="success">0.493s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">deposit()</td>
+<td class="failures">0.096s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">getEscrowBalanceTotal()</td>
+<td class="failures">0.047s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">offer()</td>
+<td class="success">0.107s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">order()</td>
+<td class="success">0.154s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>01:21:00.277 [Test worker] INFO  o.h.b.e.m.ProtocolScheduleBuilder - Protocol schedule created with milestones: [ConstantinopleFix: 0]
+01:21:00.429 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0x896a24c0a23b63abdae2dbdd4788f2c91271f0cc8dd6491e37e02327a1a20491
+01:21:01.458 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0xf590ad675142d0b7366f294ae16f1960d00adb09be702a2e12bafcf0e5e5913c
+01:21:01.724 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0xf590ad675142d0b7366f294ae16f1960d00adb09be702a2e12bafcf0e5e5913c
+01:21:01.905 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0x0fab0eac2c5bf9a588c18ed469c503b90001eae0f3b79aa77fcf6fd6d5547c09
+01:21:02.014 [Test worker] INFO  org.web3j.Web3App - balance: 1
+01:21:02.016 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0x0fab0eac2c5bf9a588c18ed469c503b90001eae0f3b79aa77fcf6fd6d5547c09
+01:21:02.094 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0x268026c3f4964bee026072cf2d6f3d193f1dc20dc195018fb0a06a3e3cfb06dd
+01:21:02.197 [Test worker] INFO  org.web3j.Web3App - balance now of 1: 1
+01:21:02.210 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0x268026c3f4964bee026072cf2d6f3d193f1dc20dc195018fb0a06a3e3cfb06dd
+01:21:02.292 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0x8d010d9e2efceadef0fe1a29c2c08c5eeb0178fbb8205e53568436c72cc76002
+01:21:02.302 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0x8d010d9e2efceadef0fe1a29c2c08c5eeb0178fbb8205e53568436c72cc76002
+01:21:02.390 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0x73eaffb7faf7a135f0a16ee4aa7837be09f7503f2820d81f2b64d081edda5443
+01:21:02.473 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0x73eaffb7faf7a135f0a16ee4aa7837be09f7503f2820d81f2b64d081edda5443
+01:21:02.573 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0xd12784b2bbec2b43bb00cf10c9666cfa5f81349bd06351b30762ee17c660cfd7
+01:21:02.582 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0xd12784b2bbec2b43bb00cf10c9666cfa5f81349bd06351b30762ee17c660cfd7
+01:21:02.726 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Ending with root: 0x3111036464c6aaa77b56540abc3f6dcaf3886e4570445eab0304348ccd9bc3cc
+In file src/main/solidity/Escrow.sol: (3, 2)
+At solidity source location 36:5749:0:
+
+  2  
+  3  co?[33mntract Escrow {?[0m
+  4  ?[33m    struct Item {?[0m
+  5  ?[33m        bytes32 name;?[0m
+  6  ?[33m        address seller;?[0m
+  7  ?[33m        int256 rate;?[0m
+  8  ?[33m    }?[0m
+  9  ?[33m    struct Order {?[0m
+ 10  ?[33m        Item item;?[0m
+ 11  ?[33m        Status status;?[0m
+ 12  ?[33m    }?[0m
+ 13  ?[33m?[0m
+ 14  ?[33m    int256 escrowTotal;?[0m
+ 15  ?[33m    mapping(bytes32 =&gt; Item) inventory;?[0m
+ 16  ?[33m    mapping(address =&gt; int256) balances;?[0m
+ 17  ?[33m    mapping(address =&gt; int256) public escrowBalances;?[0m
+ 18  ?[33m    mapping(address =&gt; Order[]) orders;?[0m
+ 19  ?[33m    mapping(address =&gt; bool) buyers;?[0m
+ 20  ?[33m    mapping(address =&gt; bool) sellers;?[0m
+ 21  ?[33m    address admn;?[0m
+ 22  ?[33m    enum Status {?[0m
+ 23  ?[33m        PAYMENT_PENDING,?[0m
+ 24  ?[33m        ORDER_PROCESSING,?[0m
+ 25  ?[33m        PAYMENT_PAID,?[0m
+ 26  ?[33m        ORDER_COMPLETE,?[0m
+ 27  ?[33m        ORDER_CANCELLED?[0m
+ 28  ?[33m    }?[0m
+ 29  ?[33m    enum Action {DEDUCT, CREDIT}?[0m
+ 30  ?[33m?[0m
+ 31  ?[33m    // constructor() public {}?[0m
+ 32  ?[33m ?[0m
+ 33  ?[33m?[0m
+ 34  ?[33m    constructor() public{ ?[0m
+ 35  ?[33m        admn = msg.sender;?[0m
+ 36  ?[33m    }?[0m
+ 37  ?[33m?[0m
+ 38  ?[33m     modifier onlyBuyer() {?[0m
+ 39  ?[33m        require(msg.sender == admn || buyers[msg.sender]==true, &quot;Only buyer can call this method&quot;);?[0m
+ 40  ?[33m        _;?[0m
+ 41  ?[33m    }?[0m
+ 42  ?[33m?[0m
+ 43  ?[33m    modifier onlySeller() {?[0m
+ 44  ?[33m        require(msg.sender == admn || sellers[msg.sender]==true, &quot;Only seller can call this method&quot;);?[0m
+ 45  ?[33m        _;?[0m
+ 46  ?[33m    }?[0m
+ 47  ?[33m?[0m
+ 48  ?[33m    modifier onlyAdmin() {?[0m
+ 49  ?[33m        require(msg.sender == admn, &quot;Only Admin can call this method&quot;);?[0m
+ 50  ?[33m        _;?[0m
+ 51  ?[33m    }?[0m
+ 52  ?[33m?[0m
+ 53  ?[33m    function addBuyer(address buyer)  onlyAdmin external{?[0m
+ 54  ?[33m        buyers[buyer] = true;?[0m
+ 55  ?[33m    }?[0m
+ 56  ?[33m    ?[0m
+ 57  ?[33m    function addSeller(address seller)  onlyAdmin external{?[0m
+ 58  ?[33m        sellers[seller] = true;?[0m
+ 59  ?[33m    }?[0m
+ 60  ?[33m?[0m
+ 61  ?[33m    function credit(address buyer, int256 amount)  onlyBuyer external{?[0m
+ 62  ?[33m        balances[buyer] += amount;?[0m
+ 63  ?[33m    }?[0m
+ 64  ?[33m?[0m
+ 65  ?[33m    function getBalance(address buyer) public view returns (int256 amount) {?[0m
+ 66  ?[33m        return balances[buyer];?[0m
+ 67  ?[33m    }?[0m
+ 68  ?[33m?[0m
+ 69  ?[33m    function offer(?[0m
+ 70  ?[33m        address seller,?[0m
+ 71  ?[33m        bytes32 item,?[0m
+ 72  ?[33m        int256 amount?[0m
+ 73  ?[33m    ) onlySeller external {?[0m
+ 74  ?[33m        Item memory stock = Item(item, seller, amount);?[0m
+ 75  ?[33m        inventory[item] = stock;?[0m
+ 76  ?[33m    }?[0m
+ 77  ?[33m?[0m
+ 78  ?[33m    function order(address buyer, bytes32 item) onlyBuyer external {?[0m
+ 79  ?[33m        if (escrowBalances[buyer] &gt;= inventory[item].rate) {?[0m
+ 80  ?[33m            orders[buyer].push(Order(inventory[item], Status.ORDER_PROCESSING));?[0m
+ 81  ?[33m            //setEscrowBalance(buyer,inventory[item].rate,Action.DEDUCT);?[0m
+ 82  ?[33m            //escrowBalances[buyer] -= inventory[item].rate;?[0m
+ 83  ?[33m        } else {?[0m
+ 84  ?[33m            orders[buyer].push(Order(inventory[item], Status.PAYMENT_PENDING));?[0m
+ 85  ?[33m        }?[0m
+ 86  ?[33m    }?[0m
+ 87  ?[33m?[0m
+ 88  ?[33m    function deposit(address buyer, int256 amount) onlyBuyer external {?[0m
+ 89  ?[33m        if (balances[buyer] &gt; 0 &amp;&amp; getBalance(buyer) &gt;= amount) {?[0m
+ 90  ?[33m            balances[buyer] -= amount;?[0m
+ 91  ?[33m            setEscrowBalance(buyer, amount, Action.CREDIT);?[0m
+ 92  ?[33m            processOrder(buyer, Status.ORDER_PROCESSING);?[0m
+ 93  ?[33m        } else {?[0m
+ 94  ?[33m            revert(&quot;Insufficient Balance for the Buyer&quot;);?[0m
+ 95  ?[33m        }?[0m
+ 96  ?[33m    }?[0m
+ 97  ?[33m?[0m
+ 98  ?[33m    function processOrder(address buyer, Status status) private{?[0m
+ 99  ?[33m        Order[] memory orderList = orders[buyer];?[0m
+100  ?[33m        for (uint256 i = 0; i &lt; orderList.length; i++) {?[0m
+101  ?[33m            if (status == Status.ORDER_PROCESSING) {?[0m
+102  ?[33m                if (orderList[i].item.rate &lt;= getBalance(buyer)) {?[0m
+103  ?[33m                    orderList[i].status = Status.ORDER_PROCESSING;?[0m
+104  ?[33m                }?[0m
+105  ?[33m            }?[0m
+106  ?[33m        }?[0m
+107  ?[33m    }?[0m
+108  ?[33m?[0m
+109  ?[33m    function complete(address buyer, bytes32 item) onlyBuyer external {?[0m
+110  ?[33m        // change order status to Complete?[0m
+111  ?[33m        Order[] memory orderList = orders[buyer];?[0m
+112  ?[33m        for (uint256 i = 0; i &lt; orderList.length; i++) {?[0m
+113  ?[33m            if (orderList[i].item.name == item) {?[0m
+114  ?[33m                if (orderList[i].status != Status.ORDER_COMPLETE) {?[0m
+115  ?[33m                    orderList[i].status = Status.ORDER_COMPLETE;?[0m
+116  ?[33m                    balances[orderList[i].item.seller] += orderList[i]?[0m
+117  ?[33m                        .item?[0m
+118  ?[33m                        .rate;?[0m
+119  ?[33m                    setEscrowBalance(?[0m
+120  ?[33m                        buyer,?[0m
+121  ?[33m                        orderList[i].item.rate,?[0m
+122  ?[33m                        Action.DEDUCT?[0m
+123  ?[33m                    );?[0m
+124  ?[33m                } else {?[0m
+125  ?[33m                    revert(&quot;Order Completed Already&quot;);?[0m
+126  ?[33m                }?[0m
+127  ?[33m            }?[0m
+128  ?[33m        }?[0m
+129  ?[33m    }?[0m
+130  ?[33m?[0m
+131  ?[33m    function complain(address buyer, bytes32 item) onlyBuyer external {?[0m
+132  ?[33m        Order[] memory orderList = orders[buyer];?[0m
+133  ?[33m        for (uint256 i = 0; i &lt; orderList.length; i++) {?[0m
+134  ?[33m            if (orderList[i].item.name == item) {?[0m
+135  ?[33m                if (orderList[i].status == Status.PAYMENT_PENDING) {?[0m
+136  ?[33m                    revert(?[0m
+137  ?[33m                        &quot;Payment not yet done for the item or Insufficient amount to place Order&quot;?[0m
+138  ?[33m                    );?[0m
+139  ?[33m                } else if (orderList[i].status == Status.ORDER_COMPLETE) {?[0m
+140  ?[33m                    revert(&quot;Order Completed Already&quot;);?[0m
+141  ?[33m                } else {?[0m
+142  ?[33m                    orderList[i].status = Status.ORDER_CANCELLED;?[0m
+143  ?[33m                    balances[buyer] += escrowBalances[buyer];?[0m
+144  ?[33m                    setEscrowBalance(?[0m
+145  ?[33m                        buyer,?[0m
+146  ?[33m                        escrowBalances[buyer],?[0m
+147  ?[33m                        Action.DEDUCT?[0m
+148  ?[33m                    );?[0m
+149  ?[33m                }?[0m
+150  ?[33m            }?[0m
+151  ?[33m        }?[0m
+152  ?[33m    }?[0m
+153  ?[33m?[0m
+154  ?[33m    function setEscrowBalance(?[0m
+155  ?[33m        address party,?[0m
+156  ?[33m        int256 amount,?[0m
+157  ?[33m        Action action?[0m
+158  ?[33m    ) private {?[0m
+159  ?[33m        if (action == Action.DEDUCT) {?[0m
+160  ?[33m            if (?[0m
+161  ?[33m                escrowTotal - amount &gt;= 0 &amp;&amp; escrowBalances[party] - amount &gt;= 0?[0m
+162  ?[33m            ) {?[0m
+163  ?[33m                escrowBalances[party] -= amount;?[0m
+164  ?[33m                escrowTotal -= amount;?[0m
+165  ?[33m            } else {?[0m
+166  ?[33m                revert(&quot;Insufficient Amount in the escrow to deduct&quot;);?[0m
+167  ?[33m            }?[0m
+168  ?[33m        } else if (action == Action.CREDIT) {?[0m
+169  ?[33m            escrowBalances[party] += amount;?[0m
+170  ?[33m            escrowTotal += amount;?[0m
+171  ?[33m        }?[0m
+172  ?[33m    }?[0m
+173  ?[33m?[0m
+174  ?[33m    function getEscrowBalanceTotal() public returns (int256 amount) {?[0m
+175  ?[33m        return escrowTotal;?[0m
+176  ?[33m    }?[0m
+177  ?[33m}?[0m
+01:21:02.782 [Test worker] INFO  org.web3j.evm.EmbeddedEthereum - Starting with root: 0x3111036464c6aaa77b56540abc3f6dcaf3886e4570445eab0304348ccd9bc3cc
+In file src/main/solidity/Escrow.sol: (175, 25)
+At solidity source location 5582:31:0:
+
+174      function getEscrowBalanceTotal() public returns (int256 amount) {
+175          return escrowTota?[33ml;?[0m
+176  ?[33m    }?[0m
+177  ?[33m}?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at 14-Jan-2021, 1:21:02 am</p>
+</div>
+</div>
+</body>
+</html>
